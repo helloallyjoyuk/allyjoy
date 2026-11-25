@@ -1,10 +1,10 @@
 // ============================================
-// Ally Joy — WEBSITE JAVASCRIPT
+// Ally Joy — WEBSITE JAVASCRIPT (UPGRADED)
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ===== MOBILE NAVIGATION =====
+    // ===== 1. MOBILE NAVIGATION =====
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             navToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
+            // Prevent body scroll when menu is open
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
 
+        // Close menu when a link is clicked
         navLinks.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function() {
                 navToggle.classList.remove('active');
@@ -22,9 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = '';
             });
         });
+
+        // NEW: Close menu automatically if window is resized to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
-    // ===== NAVBAR SCROLL EFFECT =====
+    // ===== 2. NAVBAR SCROLL EFFECT =====
     const nav = document.getElementById('nav');
     if (nav) {
         window.addEventListener('scroll', function() {
@@ -36,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== FADE-IN SCROLL ANIMATIONS =====
+    // ===== 3. FADE-IN SCROLL ANIMATIONS =====
     const fadeElements = document.querySelectorAll('.fade-in');
 
     if ('IntersectionObserver' in window) {
@@ -44,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Optional: Stop observing once it has faded in
+                    observer.unobserve(entry.target); 
                 }
             });
         }, {
@@ -61,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== FAQ ACCORDION =====
+    // ===== 4. FAQ ACCORDION =====
     const faqQuestions = document.querySelectorAll('.faq__question');
     faqQuestions.forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -83,27 +96,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== CONTACT FORM =====
+    // ===== 5. CONTACT FORM (Placeholder) =====
     const form = document.getElementById('form');
     const formSuccess = document.getElementById('formSuccess');
 
     if (form) {
         form.addEventListener('submit', function(e) {
-            // If you're using Formspree, this will work with the form's action URL
-            // For demo purposes, we'll show the success state
-            // Comment out the preventDefault below when using real form handler
-
+            // Note: When you are ready to make the form live, use Formspree or Netlify Forms.
+            // If you want to show the success message without a backend, uncomment the lines below:
+            
             // e.preventDefault();
             // form.style.display = 'none';
             // if (formSuccess) formSuccess.style.display = 'block';
         });
     }
 
-    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    // ===== 6. SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href === '#') return;
+            if (href === '#' || href === '') return;
 
             const target = document.querySelector(href);
             if (target) {
@@ -118,5 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // ===== 7. DYNAMIC COPYRIGHT YEAR (NEW) =====
+    // Automatically updates the footer year so it never gets outdated
+    const yearSpans = document.querySelectorAll('.current-year');
+    if (yearSpans.length > 0) {
+        const currentYear = new Date().getFullYear();
+        yearSpans.forEach(span => span.textContent = currentYear);
+    }
 
 });

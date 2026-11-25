@@ -5260,3 +5260,38 @@ section {
         padding: 0 20px;
     }
 }
+/* ============================================
+   FIX FOR LARGE HIGH-RES IMAGES BREAKING LAYOUT
+   ============================================ */
+
+/* 1. Fix the About Page Hero Image & Grid */
+.about-hero__content {
+    /* This prevents the image from blowing out the grid columns */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); 
+}
+
+.about-hero__image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover; /* Keeps the image looking good without stretching */
+    box-shadow: var(--shadow-md);
+}
+
+/* 2. Fix the Footer Image */
+.footer__brand-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.footer__brand-photo {
+    width: 60px;         /* Forces the image to be a small, neat circle */
+    height: 60px;
+    border-radius: 50%;  /* Makes it a perfect circle */
+    object-fit: cover;   
+    border: 2px solid var(--accent); /* Adds a nice little border */
+    flex-shrink: 0;      /* Prevents the image from squishing */
+}

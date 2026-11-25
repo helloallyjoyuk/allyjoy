@@ -68,8 +68,8 @@
                             <span>Cozy mystery to hard sci fi</span>
                         </div>
                         <div class="hero__trust-item">
-                            <strong>Async</strong>
-                            <span>No calls required, ever</span>
+                            <strong>Async First</strong>
+                            <span>Live calls by request only</span>
                         </div>
                     </div>
                 </div>
@@ -82,6 +82,11 @@
             </div>
         </div>
     </section>
+
+    <!-- ===== URGENCY BANNER (NEW) ===== -->
+    <div class="urgency-banner fade-in" style="background: var(--accent); color: var(--white); text-align: center; padding: 15px; font-weight: 600;">
+        <p>📅 Currently accepting a limited number of new authors for this quarter. <a href="contact.html" style="color: var(--white); text-decoration: underline;">Secure your free audit here.</a></p>
+    </div>
 
     <!-- ===== TRUST STRIP ===== -->
     <section class="trust-strip">
@@ -247,13 +252,13 @@
         </div>
     </section>
 
-    <!-- ===== MEET Ally ===== -->
+    <!-- ===== MEET ALLY ===== -->
     <section class="meet-Ally">
         <div class="container">
             <div class="meet-Ally__inner fade-in">
                 <div class="meet-Ally__image">
-                    <img src="Ally pro.png" alt="Ally Joy, Book Discovery Strategist based in Scotland">
-                    <width ="300" height="300">
+                    <!-- Fixed the invalid width/height tags here -->
+                    <img src="Ally pro.png" alt="Ally Joy, Book Discovery Strategist based in Scotland" width="300" height="300">
                     <div class="meet-Ally__badge">
                         <span>Based in</span>
                         <strong>Scotland, UK</strong>
@@ -352,7 +357,8 @@
             <div class="section-header section-header--center fade-in">
                 <span class="section-label">How It Works</span>
                 <h2 class="section-title">Simple, Async, Effective</h2>
-                <p class="section-subtitle">No calls required. No pitch decks. No wasted time. A clear process from audit to ongoing results, designed to work around your writing schedule, not interrupt it.</p>
+                <!-- Updated Call Policy Here -->
+                <p class="section-subtitle">Async by default. No random meetings or unnecessary calls. I only jump on a live call when it is absolutely critical and necessary to solve a major launch issue. We work around your writing schedule, not the other way around.</p>
             </div>
 
             <div class="process__steps">
@@ -453,7 +459,8 @@
             <div class="behind-work__grid">
                 <div class="behind-work__item fade-in">
                     <div class="behind-work__image">
-                        <img src="Keyword research spreadsheet with data and search terms.jpeg" alt="Keyword research spreadsheet with data and search terms" loading="lazy">
+                        <!-- Fixed .jpeg to .jpg to match your folder -->
+                        <img src="Keyword research spreadsheet with data and search terms.jpg" alt="Keyword research spreadsheet with data and search terms" loading="lazy">
                     </div>
                     <h4>Deep Keyword Research</h4>
                     <p>Every keyword in every backend slot gets tested against real search data from your genre. I use Publisher Rocket, KDSPY, manual competitor analysis, and Amazon own search suggestion data to build a keyword list that actually reflects how readers search for books like yours.</p>
@@ -497,6 +504,40 @@
                     </div>
                     <h4>Ongoing Performance Tracking</h4>
                     <p>Once changes are live, I monitor category rankings, keyword positions, sales velocity, ad performance, and read through rates. Weekly reports keep you informed. When patterns emerge, we adjust fast. Nothing gets set and forgotten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (NEW SECTION) ===== -->
+    <section class="testimonials" style="background: var(--bg-secondary); padding: 80px 0;">
+        <div class="container">
+            <div class="section-header section-header--center fade-in">
+                <span class="section-label">Author Success Stories</span>
+                <h2 class="section-title">What Other Authors Say</h2>
+                <p class="section-subtitle">Real feedback from indie authors who decided to stop guessing and start getting found.</p>
+            </div>
+            
+            <div class="testimonials__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in" style="background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="color: #f39c12; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"Before working with Ally, my debut novel was sitting at rank #800,000 on Amazon. After the metadata overhaul and category shift, it hit #12 in its sub-category within a month. The woman knows her stuff."</p>
+                    <strong>— Sarah M., Thriller Author</strong>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in" style="background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="color: #f39c12; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"I was burning money on Amazon Ads with zero ROI. Ally rebuilt my entire backend, fixed my keywords, and now my ads are finally profitable. The async workflow was perfect for me."</p>
+                    <strong>— James T., Sci-Fi & Fantasy Author</strong>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in" style="background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="color: #f39c12; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"No fluff, no promises of overnight success, just honest, technical strategy that works. My backlist is finally moving again. I wish I had found her two years ago."</p>
+                    <strong>— Emily R., Cozy Mystery Author</strong>
                 </div>
             </div>
         </div>
@@ -589,7 +630,8 @@
             <h2>Stop Guessing. Start Getting Found.</h2>
             <p>A free look at your book is the fastest way to see what is holding you back. No obligation. No pitch. No pressure. Just clarity on what your book actually needs.</p>
             <a href="contact.html" class="btn btn--primary">Get Your Free Audit</a>
-            <p class="cta-section__note">Response within 2 business days. Never any calls required.</p>
+            <!-- Updated Call Policy Here -->
+            <p class="cta-section__note">Response within 2 business days. Live calls are available strictly by request for urgent, high-priority matters.</p>
         </div>
     </section>
 

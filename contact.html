@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Ally Joy | Book Discovery Strategist</title>
-    <meta name="description" content="Get in touch for a free book discoverability audit. Email-based, async process. No calls required. Response within 2 business days.">
+    <meta name="description" content="Get in touch for a free book discoverability audit. Async process. Live calls available strictly by request for urgent matters. Response within 2 business days.">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
         <div class="container fade-in">
             <span class="section-label">Contact</span>
             <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem);">Let's Get Your Book Found</h1>
-            <p class="section-subtitle">Fill out the form below and I'll get back to you within 2 business days. No phone calls, no booking widget — just a simple form and a real reply from me.</p>
+            <p class="section-subtitle">Fill out the form below and I'll get back to you within 2 business days. No random meetings or unnecessary calls. Live calls are available strictly by request for urgent, high-priority matters.</p>
         </div>
     </section>
 
@@ -81,6 +81,16 @@
                             <label for="challenge">What's Your Current Challenge? <span>*</span></label>
                             <textarea id="challenge" name="challenge" required placeholder="Tell me what's going on — low visibility, struggling with categories, planning a launch, or anything else. The more detail the better."></textarea>
                         </div>
+                        
+                        <!-- NEW: Call Request Checkbox -->
+                        <div class="form-group" style="display: flex; align-items: flex-start; gap: 12px; background: var(--off-white); padding: 16px; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 24px;">
+                            <input type="checkbox" id="call-request" name="call_request" value="Yes - Urgent Call Requested" style="width: auto; margin-top: 4px; cursor: pointer;">
+                            <label for="call-request" style="text-transform: none; font-weight: 400; font-size: 0.9rem; letter-spacing: normal; cursor: pointer; line-height: 1.5; color: var(--text-secondary);">
+                                <strong>I am requesting a live call because this is an urgent, high-priority matter.</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light);">(Please note: I only schedule calls for critical launch emergencies. Standard communications are handled via email.)</span>
+                            </label>
+                        </div>
+
                         <button type="submit" class="btn btn--primary">Send Message</button>
                     </form>
                     <div class="form-success" id="formSuccess">
@@ -105,8 +115,7 @@
                         <div class="contact-info__icon">𝕏</div>
                         <div>
                             <h4>X (Twitter)</h4>
-                            <a href="https://x.com/allyjoyuk" target="_blank" rel="noopener">@allyjoyuk
-</a>
+                            <a href="https://x.com/allyjoyuk" target="_blank" rel="noopener">@allyjoyuk</a>
                         </div>
                     </div>
 
@@ -122,7 +131,7 @@
                         <div class="contact-info__icon">◔</div>
                         <div>
                             <h4>Response Time</h4>
-                            <p>Within 2 business days.<br>No phone calls. No booking widget.</p>
+                            <p>Within 2 business days.<br>Async by default. Live calls by request only.</p>
                         </div>
                     </div>
 
@@ -143,7 +152,7 @@
                 <div><h4>Contact</h4><ul><li><a href="mailto:info@allyjoy.co.uk">Email</a></li><li><a href="https://x.com/allyjoyuk" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
                 <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="refund.html">Refund</a></li></ul></div>
             </div>
-            <div class="footer__bottom"><p>&copy; 2026 Ally Joy. All rights reserved.</p><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+            <div class="footer__bottom"><p>&copy; <span class="current-year">2026</span> Ally Joy. All rights reserved.</p><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
         </div>
     </footer>
 
